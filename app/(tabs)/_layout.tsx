@@ -16,7 +16,7 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="feed"
+        name="index"
         options={{
           title: "Feed",
           tabBarIcon: ({ color, focused }) => (
@@ -28,6 +28,27 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="newPost"
+        options={{
+          title: "New Post",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? "add" : "add-outline"} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? "person-circle" : "person-circle-outline"}
+              color={color}
+            />
+          ),
+        }}
+      />
+      {/* <Tabs.Screen
         name="index"
         options={{
           title: "Home",
@@ -38,8 +59,8 @@ export default function TabLayout() {
             />
           ),
         }}
-      />
-      <Tabs.Screen
+      /> */}
+      {/* <Tabs.Screen
         name="explore"
         options={{
           title: "Explore",
@@ -50,7 +71,7 @@ export default function TabLayout() {
             />
           ),
         }}
-      />
+      /> */}
     </Tabs>
   );
 }
